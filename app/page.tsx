@@ -1,6 +1,7 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
@@ -70,10 +71,11 @@ export default function AnagramFinder() {
             className="flex items-center justify-center gap-2 bg-white text-gray-700 font-medium px-4 py-2 rounded shadow hover:bg-gray-100 transition"
             onClick={() => signIn("google")}
           >
-            <img
+            <Image
               src="https://static.vecteezy.com/system/resources/previews/046/861/647/non_2x/google-logo-transparent-background-free-png.png"
               alt="Google logo"
-              className="w-6 h-6"
+              width={24}
+              height={24}
             />
             Sign in with Google
           </button>
